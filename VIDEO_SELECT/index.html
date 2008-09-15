@@ -10,14 +10,24 @@
 	<!-- Date: 2008-09-13 -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/site.css">
     
-    <script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.2.6.js"></script>
+    <script src="js/facebox.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" src="js/site.settings.js"></script>
     
 </head>
 <body>
     <div class="container_16">
         <div id="capturePanel">
-        
+            <img src="http://farm4.static.flickr.com/3163/2779839495_26aa765d40.jpg" alt="My Kids">
+            <div id="choice1" class="choices">
+                
+            </div>
+            <div id="choice2" class="choices">
+                
+            </div>
+            <div id="choice3" class="choices">
+                
+            </div>
         </div>
         <div id="player" class="grid_14">
             <div id="flashPlayerBlock"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</div>
@@ -30,7 +40,8 @@
                 			{
                 				src:'video/FlowPlayerLight.swf',
                 				width: 480, 
-                				height: 360
+                				height: 360,
+                				allowscriptaccess:'always'
                 			},
 
                 			/* Flowplayer specific configuration. http://flowplayer.org/player/configuration.html */
@@ -38,9 +49,15 @@
                 				autoPlay:true,
                 				initialScale: 'scale',
                 				videoFile: 'pbi_bumper_1_w_sound.flv',
+                				loop:false,
+                				showMenu:false
                 				//menuItems: [ 1, 1, 1, 1, 1, 1, 0 ]
-                			}} 
+                			}}
                 		);
+                		function onClipDone(clip){
+                            //$('#capturePanel').facebox();
+                            alert('Im Done');
+                        }
                 	</script>
             	</div>
         
