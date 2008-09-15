@@ -1,0 +1,6 @@
+*.pyc
+*.DS_Store
+*~
+.svn
+local_settings.py
+*.psd
