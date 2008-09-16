@@ -12,6 +12,8 @@
     
     <script type="text/javascript" src="js/jquery-1.2.6.js"></script>
     <script src="js/facebox.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="js/flashembed.min.js"></script>
+    <script type="text/javascript" src="js/flow.embed.js"></script>
     <script type="text/javascript" src="js/site.settings.js"></script>
     
 </head>
@@ -31,8 +33,6 @@
         </div>
         <div id="player" class="grid_14">
             <div id="flashPlayerBlock"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</div>
-
-            	<script type="text/javascript" src="js/flashembed.min.js"></script>
 
             	<script>
             	        flashembed("flashPlayerBlock", 
@@ -54,7 +54,7 @@
                 				//menuItems: [ 1, 1, 1, 1, 1, 1, 0 ]
                 			}}
                 		);
-                		function onClipDone(clip){
+                		function onClipDone(clip) {
                             //$('#capturePanel').facebox();
                             alert('Im Done');
                         }
